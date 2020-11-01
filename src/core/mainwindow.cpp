@@ -2756,10 +2756,10 @@ bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, qintptr
 bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, long *result) {
 #endif
 
-  if (exit_count_ == 0 && message) {
-    MSG *msg = static_cast<MSG*>(message);
-    thumbbar_->HandleWinEvent(msg);
-  }
+  //if (exit_count_ == 0 && message) {
+    //MSG *msg = static_cast<MSG*>(message);
+    //thumbbar_->HandleWinEvent(msg);
+  //}
   return QMainWindow::nativeEvent(eventType, message, result);
 
 }

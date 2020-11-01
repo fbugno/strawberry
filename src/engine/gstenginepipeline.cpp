@@ -287,6 +287,10 @@ bool GstEnginePipeline::InitAudioBin() {
     }
   }
 
+  if (output_ == "wasapisink") {
+    g_object_set(G_OBJECT(audiosink), "exclusive", true, nullptr);
+  }
+
   // Create all the other elements
 
   audioqueue_ = engine_->CreateElement("queue2", audiobin_);
